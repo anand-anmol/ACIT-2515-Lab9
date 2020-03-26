@@ -61,7 +61,7 @@ def show_info(arg_list):
 
 def add_info(arg_list):
     contact_name = " ".join(arg_list)
-    info_type_accepted = ('Phone', 'Cell', 'Mobile', 'Email', 'Other')
+    info_type_accepted = ('Phone', 'Cell', 'Mobile', 'Email', 'Other', 'LinkedIn')
     if contact_name in _contacts:
         info = _contacts[contact_name]
         user_input = input("Enter contact info for " + contact_name + ": ")
@@ -121,7 +121,7 @@ def delete_info(arg_list):
 
 
 def invalid_input():
-    print('Unknown command: ', cmd)
+    print('Unknown command: "' + cmd + '"')
     print('Valid commands are: add, delete, rename, info, show, addinfo, delinfo, quit')
 
 
